@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== SEO dasar ===== -->
+<title>Demografi Peserta PK-287 · Persiapan Keberangkatan LPDP</title>
+<meta name="description" content="Ringkasan demografi peserta Persiapan Keberangkatan (PK) 287 LPDP: jenis kelamin, kelompok usia, jenis beasiswa, rumpun studi, profesi, daerah asal, negara dan universitas tujuan.">
+<meta name="keywords" content="PK-287, PK 287, LPDP, Persiapan Keberangkatan, demografi awardee, beasiswa LPDP, awardee LPDP 2026, universitas tujuan, negara tujuan">
+<meta name="author" content="Panitia PK-287">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#EE7120">
+<!-- Ganti https://pk287.example/ dengan alamat situs Anda (atau isi CONFIG.SITE_URL di Code.gs) -->
+<link rel="canonical" href="https://pk287.example/">
+<link rel="icon" type="image/png" href="asset/img/logo.png">
+<link rel="apple-touch-icon" href="asset/img/logo.png">
+
+<!-- Open Graph / media sosial -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="PK-287 LPDP">
+<meta property="og:title" content="Demografi Peserta PK-287 · Persiapan Keberangkatan LPDP">
+<meta property="og:description" content="Gambaran angkatan PK-287: sebaran gender, usia, beasiswa, rumpun studi, daerah asal, serta negara dan universitas tujuan.">
+<meta property="og:url" content="https://pk287.example/">
+<meta property="og:image" content="https://pk287.example/asset/img/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Demografi Peserta PK-287">
+<meta name="twitter:description" content="Gambaran demografi angkatan Persiapan Keberangkatan PK-287 LPDP.">
+<meta name="twitter:image" content="https://pk287.example/asset/img/logo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Demografi Peserta PK-287",
+  "description": "Ringkasan demografi peserta Persiapan Keberangkatan (PK) 287 LPDP.",
+  "inLanguage": "id-ID",
+  "url": "https://pk287.example/",
+  "copyrightHolder": { "@type": "Organization", "name": "PK-287" },
+  "copyrightYear": 2026
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+
+<style>
+  :root {
+    /* Palet logo LPDP: putih, oranye, emas */
+    --bg: #ffffff;
+    --bg-soft: #FFF8EF;
+    --card: #ffffff;
+    --ink: #2B1A0C;
+    --muted: #7A6553;
+    --line: #F1E3D3;
+    --orange: #EE7120;
+    --orange-dk: #C2560F;
+    --gold: #FDD400;
+    --gold-dk: #B98F00;      /* emas untuk teks di atas putih (kontras cukup) */
+    --gold-soft: #FFF3B8;
+    --orange-soft: #FDE6D5;
+    --gray: #C9BFB5;
+    --radius: 16px;
+    --shadow: 0 1px 2px rgba(120, 60, 10, .05), 0 6px 20px rgba(238, 113, 32, .07);
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+  img { max-width: 100%; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; overflow: hidden; background:
+      radial-gradient(900px 380px at 100% -10%, var(--gold-soft) 0, transparent 60%),
+      radial-gradient(700px 360px at -10% 120%, var(--orange-soft) 0, transparent 60%),
+      var(--bg); border-bottom: 1px solid var(--line); }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+    background: linear-gradient(90deg, var(--orange) 0 50%, var(--gold) 50% 100%); }
+  .hero .in { max-width: 1160px; margin: 0 auto; padding: 36px 16px 40px; display: flex; gap: 24px; align-items: center; }
+  .hero .logo { width: 84px; height: 84px; flex: none; object-fit: contain; filter: drop-shadow(0 6px 14px rgba(238,113,32,.25)); }
+  .eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--orange-dk); }
+  .eyebrow::before { content: ""; width: 22px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--orange), var(--gold)); }
+  .hero h1 { margin: 6px 0 4px; font-size: clamp(26px, 4.4vw, 42px); line-height: 1.12; letter-spacing: -.02em; font-weight: 800; }
+  .hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--orange), #F5A000); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { margin: 0; color: var(--muted); max-width: 640px; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 99px;
+    background: #fff; border: 1px solid var(--line); color: var(--muted); margin-top: 14px; }
+  .badge.live { color: var(--orange-dk); border-color: var(--orange); }
+  .badge.live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 3px var(--orange-soft); }
+  @media (max-width: 560px) { .hero .in { flex-direction: column; align-items: flex-start; gap: 14px; padding: 26px 16px 30px; } .hero .logo { width: 60px; height: 60px; } }
+
+  /* ---------- nav ---------- */
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line); }
+  nav .in { max-width: 1160px; margin: 0 auto; padding: 10px 16px; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+  nav .in::-webkit-scrollbar { display: none; }
+  nav a { white-space: nowrap; font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 99px; transition: .15s; }
+  nav a:hover, nav a.on { background: var(--orange-soft); color: var(--orange-dk); }
+
+  /* ---------- layout ---------- */
+  main { max-width: 1160px; margin: 0 auto; padding: 8px 16px 64px; }
+  section { margin-top: 44px; scroll-margin-top: 64px; }
+  .sec-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+  .sec-head .num { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; font-size: 15px;
+    color: #fff; background: linear-gradient(135deg, var(--orange), #F59A1C); align-self: center; }
+  .sec-head h2 { font-size: 21px; margin: 0; letter-spacing: -.01em; }
+  .sec-head p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; }
+  body { overflow-x: hidden; }
+  .hero .in > div { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; min-width: 0; box-shadow: var(--shadow); }
+  .c3 { grid-column: span 3; } .c4 { grid-column: span 4; } .c5 { grid-column: span 5; } .c6 { grid-column: span 6; }
+  .c7 { grid-column: span 7; } .c8 { grid-column: span 8; } .c12 { grid-column: span 12; }
+  @media (max-width: 900px) { .c3 { grid-column: span 6; } .c4, .c5, .c6, .c7, .c8 { grid-column: span 12; } }
+
+  /* ---------- KPI ---------- */
+  .kpi { position: relative; overflow: hidden; }
+  .kpi::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--orange); }
+  .kpi.g::before { background: var(--gold); }
+  .kpi .l { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .kpi .v { font-size: 32px; font-weight: 800; line-height: 1.15; margin-top: 4px; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  .kpi .s { font-size: 12.5px; color: var(--muted); }
+  @media (max-width: 560px) { .kpi .v { font-size: 24px; } .card { padding: 14px; } }
+
+  .card h3 { font-size: 14.5px; margin: 0 0 12px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .copy { font: inherit; font-size: 11px; font-weight: 600; color: var(--muted); background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: 8px; padding: 3px 10px; cursor: pointer; flex: none; }
+  .copy:hover { color: var(--orange-dk); border-color: var(--orange); }
+
+  /* ---------- tabel ---------- */
+  .tw { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  th, td { padding: 7px 8px; border-bottom: 1px solid var(--line); text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 700; background: var(--bg-soft); }
+  tbody tr:hover td { background: #FFFBF5; }
+  tr.grp td { font-weight: 700; background: var(--bg-soft); }
+  tr.grp td:first-child { border-left: 4px solid var(--c, var(--orange)); padding-left: 10px; }
+  tr.tot td { font-weight: 800; background: var(--gold-soft); border-bottom: 0; }
+  tr.na td { color: var(--muted); font-style: italic; }
+
+  /* ---------- chart & visual ---------- */
+  .chart { position: relative; height: 260px; }
+  .stack { display: flex; height: 38px; border-radius: 10px; overflow: hidden; margin: 6px 0 12px; background: var(--bg-soft); }
+  .stack div { display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; min-width: 0; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12.5px; color: var(--muted); }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 12px; border: 1px dashed var(--gray); border-radius: 99px; padding: 2px 10px; color: var(--muted); }
+  .note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .big { font-size: 46px; font-weight: 800; color: var(--orange); line-height: 1; letter-spacing: -.03em; }
+  .uni-tools { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+  .uni-tools input { font: inherit; padding: 9px 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    color: var(--ink); width: min(360px, 100%); outline: none; }
+  .uni-tools input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-soft); }
+  .uni-grid { columns: 3 300px; column-gap: 16px; }
+  .uni-grid .card { break-inside: avoid; margin-bottom: 16px; padding: 14px 16px; }
+  .loading { padding: 80px 0; text-align: center; color: var(--muted); }
+  .loading::before { content: ""; display: block; width: 34px; height: 34px; margin: 0 auto 12px; border-radius: 50%;
+    border: 3px solid var(--orange-soft); border-top-color: var(--orange); animation: spin 0.9s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--line); background: var(--bg-soft); }
+  footer .in { max-width: 1160px; margin: 0 auto; padding: 22px 16px 30px; display: flex; flex-wrap: wrap; gap: 8px 24px;
+    justify-content: space-between; align-items: center; font-size: 12.5px; color: var(--muted); }
+  footer b { color: var(--ink); }
+  footer .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); }
+  footer .brand img { width: 26px; height: 26px; object-fit: contain; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="in">
+    <img class="logo" src="asset/img/logo.png" alt="Logo LPDP" width="84" height="84" onerror="this.style.display='none'">
+    <div>
+      <span class="eyebrow">Persiapan Keberangkatan LPDP</span>
+      <h1>Demografi Peserta <em>PK-287</em></h1>
+      <p id="asof">Gambaran umum angkatan: siapa kami, dari mana kami berasal, dan ke mana kami akan belajar.</p>
+      <span class="badge" id="source">Memuat data…</span>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Navigasi bagian"><div class="in">
+  <a href="#ringkas">Ringkasan</a><a href="#profil">Profil</a><a href="#beasiswa">Beasiswa</a>
+  <a href="#rumpun">Rumpun Studi</a><a href="#profesi">Profesi</a><a href="#daerah">Daerah Asal</a>
+  <a href="#negara">Negara Tujuan</a><a href="#universitas">Universitas</a>
+</div></nav>
+
+<main id="app">
+  <div class="loading">Memuat data demografi…</div>
+  <noscript><p class="note" style="text-align:center">Aktifkan JavaScript untuk melihat grafik demografi peserta PK-287.</p></noscript>
+</main>
+
+<footer><div class="in">
+  <div class="brand"><img src="asset/img/logo.png" alt="" onerror="this.style.display='none'">Demografi PK-287</div>
+  <div>Hanya menampilkan angka agregat. Tidak ada data pribadi peserta yang dipublikasikan.</div>
+  <div>&copy; <span id="yr">2026</span> <b>PK-287</b>. Hak cipta dilindungi.</div>
+</div></footer>
+
+<script>
+/* ===== Konfigurasi =====
+ * 1) Disajikan oleh Google Apps Script (HtmlService) → data otomatis via google.script.run.getSummary().
+ * 2) Di-hosting di tempat lain (GitHub Pages, Netlify, dll.) → isi API_URL dengan URL Web App + "?format=json".
+ * 3) Jika keduanya tidak tersedia → dipakai snapshot agregat yang tertanam (EMBEDDED_DATA). */
+var CONFIG = { API_URL: '' };
+var EMBEDDED_DATA = {"meta":{"angkatan":"PK-287","generatedAt":"2026-11-05T04:45:24.495Z","asOf":"2026-11-05","sumber":"Snapshot Cleaning Database PK-287"},"total":383,"gender":[{"label":"Perempuan","count":199},{"label":"Laki-laki","count":184}],"usia":[{"label":"Di bawah 25","count":51},{"label":"25–29","count":143},{"label":"30–34","count":103},{"label":"35–39","count":55},{"label":"40 ke atas","count":18}],"usiaBelumDiisi":13,"lokasi":{"ln":165,"dn":218},"jenjangLokasi":[{"label":"Magister","ln":128,"dn":95,"total":223},{"label":"Doktor","ln":37,"dn":79,"total":116},{"label":"Spesialis","ln":0,"dn":44,"total":44}],"skema":[{"label":"Targeted","count":197,"items":[{"label":"PNS/TNI/POLRI","count":50},{"label":"Kemitraan LPDP (Univ. mitra)","count":48},{"label":"Dokter Spesialis/Subspesialis (termasuk RSPPU)","count":44},{"label":"Kerja Sama Indonesia–Tiongkok","count":30},{"label":"Perguruan Tinggi Utama Dunia","count":11},{"label":"Akselerasi Magister/Universitas Unggulan","count":7},{"label":"Keolahragaan (Jalur Peningkatan Prestasi)","count":4},{"label":"Doktor Talenta Riset dan Inovasi Nasional","count":1},{"label":"Keolahragaan (Jalur Penghargaan Prestasi)","count":1},{"label":"Kewirausahaan","count":1}]},{"label":"Umum","count":79,"items":[{"label":"Reguler","count":56},{"label":"Parsial","count":23}]},{"label":"Afirmasi","count":107,"items":[{"label":"Daerah Afirmasi","count":48},{"label":"Prasejahtera","count":32},{"label":"Putra-Putri Papua","count":16},{"label":"Penyandang Disabilitas","count":11}]}],"rumpun":{"groups":[{"label":"STEM","items":[{"label":"Kesehatan dan Ilmu Hayati","S2":26,"S3":26,"Sp":41,"total":93},{"label":"Komputer, Data & AI / Teknologi","S2":17,"S3":4,"Sp":0,"total":21},{"label":"Lingkungan dan Energi","S2":17,"S3":4,"Sp":0,"total":21},{"label":"Matematika","S2":4,"S3":4,"Sp":0,"total":8},{"label":"Pertanian dan Pangan","S2":11,"S3":17,"Sp":0,"total":28},{"label":"Sains","S2":13,"S3":8,"Sp":0,"total":21},{"label":"Teknik","S2":39,"S3":19,"Sp":0,"total":58}],"total":250},{"label":"STEM-Related","items":[{"label":"Bisnis dan Ekonomi","S2":36,"S3":5,"Sp":0,"total":41},{"label":"Hukum dan Kebijakan Publik","S2":17,"S3":6,"Sp":0,"total":23}],"total":64},{"label":"SHARE","items":[{"label":"Humaniora dan Seni","S2":8,"S3":2,"Sp":0,"total":10},{"label":"Ilmu Sosial","S2":25,"S3":6,"Sp":0,"total":31},{"label":"Pendidikan dan Olahraga","S2":5,"S3":9,"Sp":0,"total":14}],"total":55}],"stem":314,"stemRelated":64,"share":55,"belumDiisi":14,"kosong":13},"profesi":{"groups":[{"label":"PNS/TNI/POLRI","count":128,"items":[{"label":"Pegawai K/L (PNS)","count":60},{"label":"Dosen Tetap","count":32},{"label":"Dokter","count":15},{"label":"Peneliti/Perekayasa","count":8},{"label":"Polri","count":6},{"label":"TNI","count":4},{"label":"Medis/Paramedis","count":2},{"label":"Instruktur","count":1}]},{"label":"Non-PNS/TNI/POLRI","count":249,"items":[{"label":"Pegawai Swasta","count":67},{"label":"Fresh Graduate","count":38},{"label":"Dokter","count":28},{"label":"Dosen Tetap","count":24},{"label":"Lainnya","count":20},{"label":"Guru","count":11},{"label":"Tidak Bekerja","count":10},{"label":"Peneliti/Perekayasa","count":9},{"label":"Wiraswasta","count":8},{"label":"Ahli Profesional","count":6},{"label":"Mahasiswa","count":6},{"label":"Pegawai BUMN","count":6},{"label":"Pegawai LSM / Pekerja Sosial","count":5},{"label":"Dosen Tidak Tetap","count":4},{"label":"Pegawai Pemerintah Non Pegawai Negeri","count":3},{"label":"Pengacara","count":2},{"label":"Bidan/Perawat","count":1},{"label":"Medis/Paramedis","count":1}]}],"belumDiisi":6},"provinsi":{"list":[{"label":"Jawa Timur","count":53},{"label":"Jawa Barat","count":51},{"label":"Jawa Tengah","count":36},{"label":"DKI Jakarta","count":31},{"label":"Nusa Tenggara Timur","count":27},{"label":"Banten","count":19},{"label":"Sulawesi Selatan","count":19},{"label":"DI Yogyakarta","count":15},{"label":"Sumatera Utara","count":12},{"label":"Papua","count":12},{"label":"Maluku","count":11},{"label":"Sumatera Barat","count":10},{"label":"Aceh","count":9},{"label":"Riau","count":6},{"label":"Sumatera Selatan","count":6},{"label":"Bengkulu","count":5},{"label":"Lampung","count":5},{"label":"Sulawesi Utara","count":5},{"label":"Papua Barat","count":5},{"label":"Nusa Tenggara Barat","count":4},{"label":"Kalimantan Barat","count":4},{"label":"Jambi","count":3},{"label":"Bali","count":3},{"label":"Sulawesi Tengah","count":3},{"label":"Kepulauan Riau","count":2},{"label":"Sulawesi Tenggara","count":2},{"label":"Maluku Utara","count":2},{"label":"Papua Pegunungan","count":2},{"label":"Papua Selatan","count":2},{"label":"Bangka Belitung","count":1},{"label":"Kalimantan Tengah","count":1},{"label":"Kalimantan Selatan","count":1},{"label":"Gorontalo","count":1},{"label":"Sulawesi Barat","count":1},{"label":"Papua Tengah","count":1},{"label":"Kalimantan Timur","count":0},{"label":"Kalimantan Utara","count":0},{"label":"Papua Barat Daya","count":0}],"belumDiisi":13,"totalProvinsi":35,"dari":38},"wilayah":[{"label":"Jawa","count":205},{"label":"Sumatera","count":59},{"label":"Bali & Nusa Tenggara","count":34},{"label":"Sulawesi","count":31},{"label":"Papua","count":22},{"label":"Maluku","count":13},{"label":"Kalimantan","count":6}],"negara":{"kawasan":[{"label":"Asia","count":256,"items":[{"label":"Indonesia","count":212},{"label":"Tiongkok","count":31},{"label":"Jepang","count":9},{"label":"Korea Selatan","count":2},{"label":"Malaysia","count":1},{"label":"Taiwan","count":1}]},{"label":"Eropa","count":79,"items":[{"label":"Inggris (UK)","count":63},{"label":"Prancis","count":5},{"label":"Jerman","count":4},{"label":"Spanyol","count":2},{"label":"Swedia","count":2},{"label":"Austria","count":1},{"label":"Irlandia","count":1},{"label":"Swiss","count":1}]},{"label":"Amerika","count":19,"items":[{"label":"Amerika Serikat","count":19}]},{"label":"Oseania","count":16,"items":[{"label":"Australia","count":15},{"label":"Selandia Baru","count":1}]}],"belumDiisi":13,"totalNegara":17,"luarNegeri":[{"label":"Inggris (UK)","count":63},{"label":"Tiongkok","count":31},{"label":"Amerika Serikat","count":19},{"label":"Australia","count":15},{"label":"Jepang","count":9},{"label":"Prancis","count":5},{"label":"Jerman","count":4},{"label":"Korea Selatan","count":2},{"label":"Spanyol","count":2},{"label":"Swedia","count":2},{"label":"Austria","count":1},{"label":"Irlandia","count":1},{"label":"Malaysia","count":1},{"label":"Selandia Baru","count":1},{"label":"Swiss","count":1},{"label":"Taiwan","count":1}]},"universitas":{"negara":[{"label":"Indonesia","count":212,"items":[{"label":"Universitas Gadjah Mada","count":38},{"label":"Universitas Indonesia","count":33},{"label":"Institut Teknologi Sepuluh Nopember (ITS)","count":18},{"label":"Institut Teknologi Bandung","count":15},{"label":"IPB University","count":14},{"label":"Universitas Sebelas Maret","count":11},{"label":"Universitas Hasanuddin","count":10},{"label":"Universitas Padjadjaran","count":10},{"label":"Universitas Brawijaya","count":8},{"label":"RS Pusat Otak Nasional Prof. Dr. dr. Mahar Mardjono","count":6},{"label":"King's College London (Kampus Singhasari)","count":5},{"label":"RSAB Harapan Kita","count":4},{"label":"Universitas Negeri Yogyakarta","count":4},{"label":"Universitas Pendidikan Indonesia","count":4},{"label":"RS Jantung dan Pembuluh Darah Harapan Kita","count":3},{"label":"RS Mata Cicendo","count":3},{"label":"Universitas Bina Nusantara","count":3},{"label":"Universitas Cenderawasih","count":3},{"label":"Universitas Diponegoro","count":3},{"label":"Universitas Airlangga","count":2},{"label":"Universitas Nusa Cendana","count":2},{"label":"Universitas Syiah Kuala","count":2},{"label":"Universitas Udayana","count":2},{"label":"UIN Mataram","count":1},{"label":"UIN Maulana Malik Ibrahim Malang","count":1},{"label":"Universitas Andalas","count":1},{"label":"Universitas Katolik Indonesia Atma Jaya","count":1},{"label":"Universitas Katolik Parahyangan","count":1},{"label":"Universitas Negeri Malang","count":1},{"label":"Universitas Negeri Semarang","count":1},{"label":"Universitas Pattimura","count":1},{"label":"Universitas Sumatera Utara","count":1}]},{"label":"Inggris (UK)","count":63,"items":[{"label":"University of Dundee","count":16},{"label":"University of Edinburgh","count":6},{"label":"University of Glasgow","count":6},{"label":"University College London","count":4},{"label":"Imperial College London","count":3},{"label":"University of East Anglia","count":3},{"label":"University of Manchester","count":3},{"label":"University of Oxford","count":3},{"label":"University of Sheffield","count":3},{"label":"London School of Economics and Political Science","count":2},{"label":"University of Cambridge","count":2},{"label":"University of Leeds","count":2},{"label":"University of Southampton","count":2},{"label":"King's College London","count":1},{"label":"Newcastle University","count":1},{"label":"University of Birmingham","count":1},{"label":"University of Bristol","count":1},{"label":"University of Dundee (joint degree dgn Universitas Gadjah Mada)","count":1},{"label":"University of Glasgow (joint degree dgn Universitas Gadjah Mada)","count":1},{"label":"University of Nottingham","count":1},{"label":"University of Strathclyde","count":1}]},{"label":"Tiongkok","count":31,"items":[{"label":"Central South University","count":27},{"label":"Northeastern University","count":2},{"label":"Tsinghua University","count":1},{"label":"University of Science and Technology Beijing","count":1}]},{"label":"Amerika Serikat","count":19,"items":[{"label":"Georgetown University","count":15},{"label":"Columbia University","count":1},{"label":"Duke University","count":1},{"label":"Harvard University","count":1},{"label":"University of California-Berkeley","count":1}]},{"label":"Australia","count":15,"items":[{"label":"University of New South Wales (UNSW)","count":7},{"label":"University of Queensland","count":2},{"label":"University of Queensland (joint degree dgn Universitas Gadjah Mada)","count":2},{"label":"Australian National University","count":1},{"label":"RMIT University (joint degree dgn Institut Teknologi Bandung)","count":1},{"label":"Swinburne University of Technology","count":1},{"label":"University of Melbourne (joint degree dgn Universitas Gadjah Mada)","count":1}]},{"label":"Jepang","count":9,"items":[{"label":"Hiroshima University","count":7},{"label":"Tohoku University","count":1},{"label":"University of Tokyo","count":1}]},{"label":"Prancis","count":5,"items":[{"label":"Université de Toulouse","count":2},{"label":"Emlyon Business School","count":1},{"label":"Université de Montpellier","count":1},{"label":"Université Paris-Saclay","count":1}]},{"label":"Jerman","count":4,"items":[{"label":"Universität Freiburg","count":2},{"label":"Technical University Munich","count":1},{"label":"Universität Stuttgart","count":1}]},{"label":"Korea Selatan","count":2,"items":[{"label":"Korea Advanced Institute of Science and Technology","count":1},{"label":"University of Science and Technology (UST) Korea","count":1}]},{"label":"Spanyol","count":2,"items":[{"label":"IE University","count":2}]},{"label":"Swedia","count":2,"items":[{"label":"KTH Royal Institute of Technology","count":1},{"label":"World Maritime University","count":1}]},{"label":"Austria","count":1,"items":[{"label":"University of Vienna","count":1}]},{"label":"Irlandia","count":1,"items":[{"label":"University College Dublin","count":1}]},{"label":"Malaysia","count":1,"items":[{"label":"Universiti Sains Malaysia","count":1}]},{"label":"Selandia Baru","count":1,"items":[{"label":"Auckland University of Technology","count":1}]},{"label":"Swiss","count":1,"items":[{"label":"César Ritz Colleges","count":1}]},{"label":"Taiwan","count":1,"items":[{"label":"National Taiwan University of Science and Technology (joint degree dgn Institut Teknologi Sepuluh Nopember)","count":1}]}],"belumDiisi":13,"totalUniversitas":90}};
+
+var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+var fmt = function (n) { return (n || 0).toLocaleString('id-ID'); };
+var pct = function (n, t) { return t ? (100 * n / t).toLocaleString('id-ID', { maximumFractionDigits: 1 }) + '%' : '0%'; };
+var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+var sum = function (a, f) { return a.reduce(function (s, x) { return s + (f ? f(x) : x); }, 0); };
+
+function load() {
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  if (window.google && google.script && google.script.run) {
+    google.script.run.withSuccessHandler(function (d) { render(typeof d === 'string' ? JSON.parse(d) : d, 'live'); })
+      .withFailureHandler(function (e) { render(EMBEDDED_DATA, 'embedded', e && e.message); }).getSummary();
+  } else if (CONFIG.API_URL) {
+    fetch(CONFIG.API_URL).then(function (r) { return r.json(); })
+      .then(function (d) { render(d, 'live'); })
+      .catch(function (e) { render(EMBEDDED_DATA, 'embedded', e.message); });
+  } else render(EMBEDDED_DATA, 'embedded');
+}
+
+/* ---------- helpers ---------- */
+function table(id, head, rows) {
+  var h = '<div class="tw"><table id="' + id + '"><thead><tr>' + head.map(function (x) { return '<th>' + esc(x) + '</th>'; }).join('') + '</tr></thead><tbody>';
+  rows.forEach(function (r) {
+    var cls = r._cls ? ' class="' + r._cls + '"' : '', st = r._c ? ' style="--c:' + r._c + '"' : '';
+    h += '<tr' + cls + st + '>' + r.cells.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>';
+  });
+  return h + '</tbody></table></div>';
+}
+function cardH(title, tableId) {
+  return '<h3><span>' + esc(title) + '</span>' + (tableId ? '<button class="copy" data-t="' + tableId + '" title="Salin tabel untuk ditempel ke Sheets/Slides">Salin</button>' : '') + '</h3>';
+}
+function secHead(n, title, sub) {
+  return '<div class="sec-head"><span class="num">' + n + '</span><div><h2>' + esc(title) + '</h2>' + (sub ? '<p>' + sub + '</p>' : '') + '</div></div>';
+}
+function textOn(bg) { // teks gelap di atas emas, putih di atas oranye
+  return /FDD400|FFE36E|FFF3B8|C9BFB5/i.test(bg) ? '#2B1A0C' : '#fff';
+}
+var charts = [];
+var valueLabels = {
+  id: 'valueLabels',
+  afterDatasetsDraw: function (chart, args, o) {
+    if (!o || !o.on) return;
+    var ctx = chart.ctx; ctx.save(); ctx.font = '700 11px "Plus Jakarta Sans", system-ui, sans-serif'; ctx.fillStyle = css('--ink');
+    chart.data.datasets.forEach(function (ds, i) {
+      chart.getDatasetMeta(i).data.forEach(function (el, j) {
+        var v = ds.data[j]; if (!v) return;
+        var horiz = chart.options.indexAxis === 'y';
+        ctx.textAlign = horiz ? 'left' : 'center'; ctx.textBaseline = horiz ? 'middle' : 'bottom';
+        ctx.fillText(fmt(v), horiz ? el.x + 5 : el.x, horiz ? el.y : el.y - 4);
+      });
+    });
+    ctx.restore();
+  }
+};
+function bar(canvasId, labels, data, color, horiz) {
+  var c = new Chart(document.getElementById(canvasId), {
+    type: 'bar', plugins: [valueLabels],
+    data: { labels: labels, datasets: [{ data: data, backgroundColor: color, borderRadius: 6, maxBarThickness: horiz ? 18 : 46 }] },
+    options: {
+      indexAxis: horiz ? 'y' : 'x', maintainAspectRatio: false, animation: { duration: 500 },
+      layout: { padding: { right: horiz ? 30 : 0, top: horiz ? 0 : 18 } },
+      plugins: { legend: { display: false }, valueLabels: { on: true },
+        tooltip: { callbacks: { label: function (x) { return ' ' + fmt(x.raw) + ' peserta'; } } } },
+      scales: {
+        x: { grid: { display: false }, border: { display: false }, ticks: { color: css('--muted'), font: { size: 11 } }, display: !horiz },
+        y: { grid: { display: false }, border: { display: false }, ticks: { color: css('--ink'), font: { size: 11.5 }, autoSkip: false },
+          display: !!horiz, beginAtZero: true }
+      }
+    }
+  });
+  charts.push(c); return c;
+}
+function donut(canvasId, labels, data, colors) {
+  var c = new Chart(document.getElementById(canvasId), {
+    type: 'doughnut',
+    data: { labels: labels, datasets: [{ data: data, backgroundColor: colors, borderColor: '#fff', borderWidth: 3, hoverOffset: 6 }] },
+    options: {
+      maintainAspectRatio: false, animation: { duration: 500 }, cutout: '62%',
+      plugins: { legend: { position: 'bottom', labels: { color: css('--ink'), boxWidth: 12, usePointStyle: true, font: { size: 12 } } },
+        tooltip: { callbacks: { label: function (x) { var t = sum(x.dataset.data);
+          return ' ' + x.label + ': ' + fmt(x.raw) + ' (' + pct(x.raw, t) + ')'; } } } }
+    }
+  });
+  charts.push(c); return c;
+}
+function stackBar(parts) {
+  var t = sum(parts, function (p) { return p.v; });
+  return '<div class="stack">' + parts.map(function (p) {
+    return '<div style="flex:' + p.v + ';background:' + p.c + ';color:' + textOn(p.c) + '" title="' + esc(p.l) + ': ' + fmt(p.v) + '">' + (p.v / t > .08 ? pct(p.v, t) : '') + '</div>';
+  }).join('') + '</div><div class="legend">' + parts.map(function (p) {
+    return '<span><i style="background:' + p.c + '"></i>' + esc(p.l) + ' · <b>' + fmt(p.v) + '</b> (' + pct(p.v, t) + ')</span>';
+  }).join('') + '</div>';
+}
+
+/* ---------- render ---------- */
+function render(d, mode, err) {
+  var app = document.getElementById('app');
+  if (!d) { app.innerHTML = '<div class="loading">Data tidak tersedia' + (err ? ': ' + esc(err) : '') + '</div>'; return; }
+  if (!window.Chart) { setTimeout(function () { render(d, mode, err); }, 120); return; }
+  charts.forEach(function (c) { c.destroy(); }); charts = [];
+  var O = css('--orange'), Y = css('--gold'), OD = css('--orange-dk'), YL = '#FFE36E', NA = css('--gray'), T = d.total;
+  var tgl = new Date(d.meta.generatedAt || d.meta.asOf);
+  document.getElementById('asof').textContent = 'Gambaran umum ' + fmt(T) + ' peserta angkatan ' + d.meta.angkatan + ', per ' +
+    tgl.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) + '.';
+  var src = document.getElementById('source');
+  src.textContent = mode === 'live' ? 'Data live dari Google Sheets' : 'Snapshot data' + (err ? ' (data live gagal dimuat)' : '');
+  src.className = 'badge' + (mode === 'live' ? ' live' : '');
+
+  var ln = d.lokasi.ln, dn = d.lokasi.dn, h = '';
+  var usiaTop = d.usia.slice().sort(function (a, b) { return b.count - a.count; })[0];
+  var perempuan = (d.gender.filter(function (g) { return g.label === 'Perempuan'; })[0] || { count: 0 }).count;
+  var laki = (d.gender.filter(function (g) { return g.label === 'Laki-laki'; })[0] || { count: 0 }).count;
+
+  // Ringkasan
+  h += '<section id="ringkas"><div class="grid">' + [
+    ['Total peserta', fmt(T), 'awardee angkatan ' + d.meta.angkatan],
+    ['Perempuan · Laki-laki', fmt(perempuan) + ' · ' + fmt(laki), pct(perempuan, T) + ' perempuan', 'g'],
+    ['Studi luar negeri', pct(ln, T), fmt(ln) + ' peserta · ' + fmt(dn) + ' dalam negeri'],
+    ['Usia terbanyak', usiaTop.label, fmt(usiaTop.count) + ' peserta (' + pct(usiaTop.count, T) + ')', 'g'],
+    ['Provinsi asal', fmt(d.provinsi.totalProvinsi), 'dari ' + d.provinsi.dari + ' provinsi di Indonesia'],
+    ['Negara tujuan', fmt(d.negara.totalNegara), 'termasuk Indonesia', 'g'],
+    ['Universitas tujuan', fmt(d.universitas.totalUniversitas), 'kampus & RS pendidikan'],
+    ['Rumpun STEM', pct(d.rumpun.stem, T), 'termasuk STEM-Related', 'g']
+  ].map(function (k) {
+    return '<div class="card kpi c3 ' + (k[3] || '') + '"><div class="l">' + k[0] + '</div><div class="v">' + esc(k[1]) + '</div><div class="s">' + k[2] + '</div></div>';
+  }).join('') + '</div></section>';
+
+  // 1. Profil
+  var jl = d.jenjangLokasi, jt = [sum(jl, function (r) { return r.ln; }), sum(jl, function (r) { return r.dn; }), sum(jl, function (r) { return r.total; })];
+  h += '<section id="profil">' + secHead(1, 'Profil Peserta', 'Jenis kelamin, kelompok usia, lokasi studi, dan jenjang.') + '<div class="grid">' +
+    '<div class="card c4">' + cardH('Jenis Kelamin', 't-gender') + '<div class="chart" style="height:220px"><canvas id="ch-gender" aria-label="Grafik jenis kelamin"></canvas></div>' +
+    table('t-gender', ['Jenis kelamin', 'Jumlah', '%'], d.gender.map(function (g) { return { cells: [g.label, fmt(g.count), pct(g.count, T)] }; })) + '</div>' +
+    '<div class="card c8">' + cardH('Kelompok Usia', 't-usia') + '<div class="chart" style="height:230px"><canvas id="ch-usia" aria-label="Grafik kelompok usia"></canvas></div>' +
+    (d.usiaBelumDiisi ? '<p class="note">' + fmt(d.usiaBelumDiisi) + ' peserta belum mengisi tanggal lahir.</p>' : '') +
+    '<div style="display:none">' + table('t-usia', ['Kelompok usia', 'Jumlah'], d.usia.map(function (u) { return { cells: [u.label, u.count] }; })) + '</div></div>' +
+    '<div class="card c12">' + cardH('Lokasi Universitas Tujuan') +
+    stackBar([{ l: 'Luar Negeri', v: ln, c: O }, { l: 'Dalam Negeri', v: dn, c: Y }]) +
+    '<h3 style="margin-top:22px"><span>Jenjang Studi Menurut Lokasi</span><button class="copy" data-t="t-jenjang">Salin</button></h3>' +
+    table('t-jenjang', ['Jenjang studi', 'Luar Negeri', 'Dalam Negeri', 'Jumlah'],
+      jl.map(function (r) { return { cells: [r.label, fmt(r.ln), fmt(r.dn), fmt(r.total)] }; })
+        .concat([{ _cls: 'tot', cells: ['TOTAL', fmt(jt[0]), fmt(jt[1]), fmt(jt[2])] }])) + '</div></div></section>';
+
+  // 2. Beasiswa
+  var skColors = { Targeted: O, Umum: Y, Afirmasi: OD }, skRows = [];
+  d.skema.forEach(function (g) {
+    skRows.push({ _cls: 'grp', _c: skColors[g.label] || NA, cells: [g.label, fmt(g.count), pct(g.count, T)] });
+    g.items.forEach(function (i) { skRows.push({ cells: [i.label, fmt(i.count), pct(i.count, T)] }); });
+  });
+  h += '<section id="beasiswa">' + secHead(2, 'Jenis Beasiswa', 'Dikelompokkan menjadi Targeted, Umum, dan Afirmasi.') + '<div class="grid">' +
+    '<div class="card c5">' + cardH('Komposisi Skema') + '<div class="chart" style="height:290px"><canvas id="ch-skema" aria-label="Grafik skema beasiswa"></canvas></div></div>' +
+    '<div class="card c7">' + cardH('Rincian Skema Beasiswa', 't-skema') + table('t-skema', ['Skema', 'Jumlah', '%'], skRows) + '</div></div></section>';
+
+  // 3. Rumpun studi
+  var rc = { 'STEM': O, 'STEM-Related': Y, 'SHARE': OD }, rRows = [], rt = [0, 0, 0, 0];
+  d.rumpun.groups.forEach(function (g) {
+    rRows.push({ _cls: 'grp', _c: rc[g.label], cells: [g.label, '', '', '', fmt(g.total)] });
+    g.items.forEach(function (i) { rRows.push({ cells: [i.label, fmt(i.S2), fmt(i.S3), fmt(i.Sp), fmt(i.total)] }); rt[0] += i.S2; rt[1] += i.S3; rt[2] += i.Sp; rt[3] += i.total; });
+  });
+  var rb = d.rumpun.belumDiisi;
+  if (rb) rRows.push({ _cls: 'na', cells: ['Belum diisi / belum terklasifikasi', '', '', '', fmt(rb)] });
+  rRows.push({ _cls: 'tot', cells: ['TOTAL (terklasifikasi)', fmt(rt[0]), fmt(rt[1]), fmt(rt[2]), fmt(rt[3])] });
+  h += '<section id="rumpun">' + secHead(3, 'Rumpun Studi', 'STEM-Related dihitung sebagai bagian dari STEM. S2 = Magister, S3 = Doktor, Sp = Spesialis.') + '<div class="grid">' +
+    '<div class="card c5">' + cardH('STEM vs SHARE') +
+    stackBar([{ l: 'STEM (incl. STEM-Related)', v: d.rumpun.stem, c: O }, { l: 'SHARE', v: d.rumpun.share, c: Y }].concat(rb ? [{ l: 'Belum diisi', v: rb, c: NA }] : [])) +
+    '<div class="note">di antaranya STEM-Related: ' + fmt(d.rumpun.stemRelated) + ' peserta (' + pct(d.rumpun.stemRelated, T) + ')</div>' +
+    '<div class="chart" style="margin-top:14px;height:330px"><canvas id="ch-rumpun" aria-label="Grafik sub rumpun studi"></canvas></div></div>' +
+    '<div class="card c7">' + cardH('Sub Rumpun per Jenjang', 't-rumpun') + table('t-rumpun', ['Sub rumpun', 'S2', 'S3', 'Sp', 'Jumlah'], rRows) + '</div></div></section>';
+
+  // 4. Profesi
+  var pg = d.profesi.groups, pCol = [O, Y];
+  h += '<section id="profesi">' + secHead(4, 'Jenis Profesi', 'Berdasarkan pekerjaan saat ini.') + '<div class="grid">' +
+    '<div class="card c12">' + cardH('PNS/TNI/POLRI vs Non-PNS') +
+    stackBar(pg.map(function (g, k) { return { l: g.label, v: g.count, c: pCol[k] || OD }; }).concat(d.profesi.belumDiisi ? [{ l: 'Belum diisi', v: d.profesi.belumDiisi, c: NA }] : [])) + '</div>' +
+    pg.map(function (g, k) {
+      return '<div class="card c6">' + cardH(g.label + ' · ' + fmt(g.count), 't-prof' + k) +
+        table('t-prof' + k, ['Jenis profesi', 'Jumlah', '%'], g.items.map(function (i) { return { cells: [i.label, fmt(i.count), pct(i.count, g.count)] }; })) + '</div>';
+    }).join('') + '</div></section>';
+
+  // 5. Daerah asal
+  var pl = d.provinsi.list, nz = pl.filter(function (p) { return p.count > 0; }), zero = pl.filter(function (p) { return p.count === 0; });
+  var pcol = function (n) { return n >= 20 ? OD : n >= 10 ? O : Y; };
+  h += '<section id="daerah">' + secHead(5, 'Sebaran Daerah Asal', 'Provinsi asal peserta. Warna: 20+, 10–19, dan 1–9 peserta.') + '<div class="grid">' +
+    '<div class="card c8">' + cardH('Peserta per Provinsi', 't-prov') +
+    '<div class="legend" style="margin-bottom:8px"><span><i style="background:' + OD + '"></i>20+</span><span><i style="background:' + O + '"></i>10–19</span><span><i style="background:' + Y + '"></i>1–9</span></div>' +
+    '<div class="chart" style="height:' + (nz.length * 21 + 40) + 'px"><canvas id="ch-prov" aria-label="Grafik peserta per provinsi"></canvas></div>' +
+    '<div style="display:none">' + table('t-prov', ['Provinsi', 'Jumlah'], pl.map(function (p) { return { cells: [p.label, p.count] }; })) + '</div></div>' +
+    '<div class="card c4">' + cardH('Total Provinsi') + '<div class="big">' + d.provinsi.totalProvinsi + '</div><div class="note">dari ' + d.provinsi.dari + ' provinsi di Indonesia</div>' +
+    (d.wilayah && d.wilayah.length ? '<h3 style="margin-top:20px"><span>Per Pulau / Wilayah</span><button class="copy" data-t="t-wil">Salin</button></h3>' +
+      table('t-wil', ['Wilayah', 'Jumlah', '%'], d.wilayah.map(function (w) { return { cells: [w.label, fmt(w.count), pct(w.count, T)] }; })) : '') +
+    '<h3 style="margin-top:20px"><span>Belum ada peserta</span></h3><div class="chips">' + (zero.length ? zero.map(function (p) { return '<span class="chip">' + esc(p.label) + '</span>'; }).join('') : '<span class="note">–</span>') + '</div>' +
+    (d.provinsi.belumDiisi ? '<p class="note">' + d.provinsi.belumDiisi + ' peserta belum mengisi provinsi asal.</p>' : '') +
+    '</div></div></section>';
+
+  // 6. Negara
+  var kc = { Asia: O, Eropa: Y, Amerika: OD, Oseania: YL }, kRows = [];
+  d.negara.kawasan.forEach(function (k) {
+    kRows.push({ _cls: 'grp', _c: kc[k.label] || NA, cells: ['Kawasan ' + k.label, fmt(k.count), pct(k.count, T)] });
+    k.items.forEach(function (i) { kRows.push({ cells: [i.label, fmt(i.count), pct(i.count, T)] }); });
+  });
+  if (d.negara.belumDiisi) kRows.push({ _cls: 'na', cells: ['Belum diisi', fmt(d.negara.belumDiisi), pct(d.negara.belumDiisi, T)] });
+  h += '<section id="negara">' + secHead(6, 'Negara Tujuan', 'Joint/double degree dihitung ke negara mitra luar negeri.') + '<div class="grid">' +
+    '<div class="card c5">' + cardH('Negara per Kawasan', 't-negara') + '<div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px"><span class="big">' + d.negara.totalNegara + '</span><span class="note">negara tujuan</span></div>' +
+    table('t-negara', ['Negara', 'Jumlah', '%'], kRows) + '</div>' +
+    '<div class="card c7">' + cardH('Negara Tujuan Luar Negeri') + '<div class="chart" style="height:' + (d.negara.luarNegeri.length * 26 + 40) + 'px"><canvas id="ch-negara" aria-label="Grafik negara tujuan luar negeri"></canvas></div></div></div></section>';
+
+  // 7. Universitas
+  h += '<section id="universitas">' + secHead(7, 'Universitas Tujuan', fmt(d.universitas.totalUniversitas) + ' universitas/rumah sakit pendidikan, dikelompokkan per negara.') +
+    '<div class="uni-tools"><input id="uni-q" type="search" placeholder="Cari universitas atau negara…" aria-label="Cari universitas"><button class="copy" id="copy-uni">Salin semua</button></div><div class="uni-grid" id="uni-grid"></div>' +
+    (d.universitas.belumDiisi ? '<p class="note">' + d.universitas.belumDiisi + ' peserta belum mengisi universitas tujuan.</p>' : '') + '</section>';
+
+  app.innerHTML = h;
+
+  // grafik
+  donut('ch-gender', d.gender.map(function (g) { return g.label; }), d.gender.map(function (g) { return g.count; }),
+    d.gender.map(function (g) { return g.label === 'Perempuan' ? O : Y; }));
+  bar('ch-usia', d.usia.map(function (u) { return u.label; }), d.usia.map(function (u) { return u.count; }),
+    d.usia.map(function (u) { return u === usiaTop ? O : Y; }), false);
+  donut('ch-skema', d.skema.map(function (g) { return g.label; }), d.skema.map(function (g) { return g.count; }), d.skema.map(function (g) { return skColors[g.label] || NA; }));
+  var subs = [], subv = [], subc = [];
+  d.rumpun.groups.forEach(function (g) { g.items.forEach(function (i) { subs.push(i.label); subv.push(i.total); subc.push(rc[g.label]); }); });
+  bar('ch-rumpun', subs, subv, subc, true);
+  bar('ch-prov', nz.map(function (p) { return p.label; }), nz.map(function (p) { return p.count; }), nz.map(function (p) { return pcol(p.count); }), true);
+  bar('ch-negara', d.negara.luarNegeri.map(function (n) { return n.label; }), d.negara.luarNegeri.map(function (n) { return n.count; }), O, true);
+
+  // universitas
+  var drawUni = function (q) {
+    q = (q || '').toLowerCase();
+    var html = d.universitas.negara.map(function (n, k) {
+      var items = n.items.filter(function (i) { return !q || i.label.toLowerCase().indexOf(q) >= 0 || n.label.toLowerCase().indexOf(q) >= 0; });
+      if (!items.length) return '';
+      return '<div class="card">' + cardH(n.label + ' · ' + fmt(n.count), 't-uni' + k) +
+        table('t-uni' + k, ['Universitas', 'Jumlah'], items.map(function (i) { return { cells: [i.label, fmt(i.count)] }; })) + '</div>';
+    }).join('');
+    document.getElementById('uni-grid').innerHTML = html || '<p class="note">Tidak ada universitas yang cocok.</p>';
+  };
+  drawUni('');
+  document.getElementById('uni-q').addEventListener('input', function (e) { drawUni(e.target.value); });
+  document.getElementById('copy-uni').addEventListener('click', function (e) {
+    var t = 'Negara\tUniversitas\tJumlah\n';
+    d.universitas.negara.forEach(function (n) { n.items.forEach(function (i) { t += n.label + '\t' + i.label + '\t' + i.count + '\n'; }); });
+    copyText(t, e.target);
+  });
+  spy();
+}
+
+/* sorot menu sesuai bagian yang sedang dibaca */
+function spy() {
+  if (!('IntersectionObserver' in window)) return;
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav a'));
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('main section').forEach(function (s) { io.observe(s); });
+}
+
+function copyText(t, btn) {
+  var done = function () { var o = btn.textContent; btn.textContent = 'Tersalin ✓'; setTimeout(function () { btn.textContent = o; }, 1400); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, function () { fallbackCopy(t); done(); });
+  else { fallbackCopy(t); done(); }
+}
+function fallbackCopy(t) {
+  var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select();
+  try { document.execCommand('copy'); } catch (e) {} a.remove();
+}
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.copy[data-t]'); if (!b) return;
+  var tb = document.getElementById(b.dataset.t); if (!tb) return;
+  copyText(Array.prototype.map.call(tb.rows, function (r) {
+    return Array.prototype.map.call(r.cells, function (c) { return c.textContent; }).join('\t');
+  }).join('\n'), b);
+});
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load); else load();
+</script>
+</body>
+</html>
